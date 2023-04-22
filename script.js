@@ -159,9 +159,9 @@ function ButtonClick_FE(){
   bejobbutton.classList.remove("activatedbutton");
   appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'FrontEnd';
+    document.getElementById("textbox2").value= 'Consulting';
     const fejobs = jobdata.filter((jobdata)=>{
-      return jobdata.type.includes("FrontEnd");
+      return jobdata.type.includes("Consulting");
     });
     renderjobs(fejobs);
   }
@@ -171,9 +171,9 @@ function ButtonClick_FE(){
     bejobbutton.classList.add("activatedbutton");
     appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'BackEnd';
+    document.getElementById("textbox2").value= 'Finance';
     const bejobs = jobdata.filter((jobdata)=>{
-      return jobdata.type.includes("BackEnd");
+      return jobdata.type.includes("Finance");
     });
     renderjobs(bejobs);
   }
@@ -183,9 +183,9 @@ function ButtonClick_FE(){
     bejobbutton.classList.remove("activatedbutton");
     appjobbutton.classList.add("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'AppDev';
+    document.getElementById("textbox2").value= 'Development';
     const appjobs = jobdata.filter((jobdata)=>{
-      return jobdata.type.includes("AppDev");
+      return jobdata.type.includes("Developer");
     });
     renderjobs(appjobs);
   }
@@ -195,8 +195,7 @@ function ButtonClick_FE(){
     bejobbutton.classList.remove("activatedbutton");
     appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.add("activatedbutton");
-    document.getElementById("textbox2").value= 'UI/UX';
-    document.getElementById("textbox2").value= 'UI/UX';
+    document.getElementById("textbox2").value= 'Design';
     const uijobs = jobdata.filter((jobdata)=>{
       return jobdata.type.includes("UI");
     });
@@ -326,16 +325,18 @@ function ButtonClick_FE(){
   
   
   let jobdata = [
-    { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd" },
-  { name: "Apple", jobname: "Apple Appstore App Developer", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "AppDev" },
-  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd" },
-  { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd" },
-  { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/yt.png", type: "UI" },
-  { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/insta.png", type: "UI" },
-  { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd" },
-  { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd" },
+    { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Developer" },
+  { name: "Apple", jobname: "Apple Appstore App Developer", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Developer" },
+  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Developer" },
+  { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Developer" },
+  { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/yt.png", type: "UI/UX" },
+  { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/insta.png", type: "UI/UX" },
+  { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd Developer" },
+  { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd Developer" },
   { name: "AWS", jobname: "Amazon Consultant", category: "Full Time", country: "India", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/aws.png", type: "Consulting" },
-  { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , USA", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
+  { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , United States", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
+  { name: "BCG", jobname: "Boston Consulting Group Consultant", category: "Full Time", country: "India , United States , Japan", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/bcg.png", type: "Consulting" },
+  { name: "JPMorgan", jobname: "J.P.Morgan Investment Banker", category: "Full Time", country: "India , Japan", skills: "Strong Numerical and Analytical skills , Financial Reports", image: "img/companies/JPMorgan.png", type: "Finance" },
 
 ];
 renderjobs(jobdata);
