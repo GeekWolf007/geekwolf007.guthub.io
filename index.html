@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIND YOUR DREAM JOB!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+  </head>
+<body onload="Clear()">
+  <header class="headerforjs">
+    <div class="logo">
+        <a href="#" style="text-decoration: none"><img class="logoimg" src="img/logo.svg" class="logo" alt=""><p class="logoname">HUNTJOBS</p></a>
+    </div>
+    <div class="lists">
+        <ul id="navbar">
+          <li><a id="homenavbar" class="homenav active" href="#home" onclick="openfunction()">Home</a></li>
+          <li><a id="jobnavbar" class="jobsnav" href="#gotojobs" onclick="jobopenfunction()">Jobs</a></li>
+          <li><a id="partnernavbar" class="partnersnav" href="#gotopartner" onclick="partneropenfunction()">Partners</a></li>
+          <li><a id="postnavbar" class="postjobnav" onclick="postjobopenfunction()" >Post Job</a></li>
+        </ul>
+    </div>
+    <div class="hamburger" onclick="openfunction()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="homepage">
+      <div class="headingmain">
+        <h2 class="abcd">FIND YOUR</h2>
+        <h2 class="emphasis">DREAM JOB</h2>
+        <h2 class="lowemphasis">WITH NO EFFORTS!</h2>
+      </div>
+      <div class="searchbar">
+        <h1>JUST <span>SEARCH!</span></h1>
+        <div class="searchbox">
+          <input id="textbox" type="text" placeholder="Job titles or keywords..." onkeyup="sync()" onkeydown="search()">
+        <button onclick="location.href = '#gotojobs';" id="superbutton">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="feature" class="section-p1">
+    <div class="fe-box">
+      <img src="img/Widgets/job-search-in-newspaper-vector.jpg" alt="">
+      <h6>Find Jobs</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/Widgets/14692.JPG" alt="">
+      <h6>Provide Jobs</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/Widgets/writing-1200x675.jpg-1-1.webp" alt="">
+      <h6>Internships</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/Widgets/0_IcZa8ENbgycZlxMt-740x490.png" alt="">
+      <h6>Training</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/Widgets/GettyImages-1050228750-78b205c15493434ca0fda93a37b0d095.jpg" alt="">
+      <h6>No Fake Jobs</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/Widgets/customersupport.png" alt="">
+      <h6>F24/7 Support</h6>
+    </div>
+  </div>
+
+  <div id="banner" class="section-m1">
+    <h4>No Need To Worry</h4>
+    <h2>Post <span>YOUR CV</span> - Get matched with job openings </h2> 
+    <button class="normal" id="gotojobs" onclick="location.href='#gotojobs'">Find Jobs</button>
+  </div>
+
+  <section id="gotojobs" class="section-p1">
+    <h2 >Job Vacancies</h2>
+    <p class="para">Find the PERFECT JOB for you</p>
+    <div  class="searchbox2">
+      <input id="textbox2" type="text" placeholder="Job titles or keywords...">
+    <button>Search</button>
+    </div>
+
+    <div id="buttons">
+      <input class="button-value activatedbutton" id="alljobbutton" type="button" value="All" name="no" onclick="ButtonClick_All()">
+      <input class="button-value" type="button" id="fejobbutton" value="FrontEnd" name="no" onclick="ButtonClick_FE()">
+      <input class="button-value" type="button" id="bejobbutton" value="BackEnd" name="no" onclick="ButtonClick_BE()">
+      <input class="button-value" type="button" id="appjobbutton" value="AppDev" name="no" onclick="ButtonClick_App()">
+      <input class="button-value" type="button" id="uijobbutton" value="UI/UX" name="no" onclick="ButtonClick_UI()">
+    </div>
+
+    <div class="product-container" id="productcontainer">
+      <!-- <div class="product-card">
+        <div class="image-container">
+          <img src="img/companies/google.png"  alt="Google">
+        </div>
+        <div class="product-content">
+          <h3>Google Frontend Web Developer</h3>
+          <p class="jobdes"><span>Employment: </span>Full Time</p>
+          <p class="jobdes"><span>Location: </span>Full Time</p>
+          <p class="jobdes"><span>Requirement: </span>Full Time</p>
+        </div>
+      </div> -->
+    </div>
+    <div class="oops none" id="oops">
+      <img src="img/sad-face-2691.svg" alt=""><div>OOPS - No Jobs!</div>
+    </div>
+    </section>
+
+
+  <div id="newsletter" class="section-p1 ">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>Get E-mail updates about Internships and <span>New Vacancies.</span></p>
+    </div>
+    <div class="form2">
+      <input type="email" id="emailinput" placeholder="Your email address">
+      <button class="normal newsletterbutton" type="button" id="gotopartner">Sign Up</button>
+    </div>
+  </div>
+
+  <section id="gotopartner" class="section-p1">
+    <h2>Our Partners</h2>
+    <div class="pro-container">
+      <div class="pro">
+        <img src="img/partners/microsoft.png" alt="">
+        <div class="des">
+          <span>Microsoft</span> 
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/chrome.png" alt="">
+        <div class="des">
+          <span>Google Chrome</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/intel.png" alt="">
+        <div class="des">
+          <span>Intel Inc.</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/paypal.png" alt="">
+        <div class="des">
+          <span>PayPal</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/adobe.png" alt="">
+        <div class="des">
+          <span>Adobe</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/aws.png" alt="">
+        <div class="des">
+          <span>Amazon Web Services</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/oracle.png" alt="">
+        <div class="des">
+          <span>Oracle</span>
+        </div>
+      </div>
+      <div class="pro">
+        <img src="img/partners/walmart.png" alt="">
+        <div class="des">
+          <span>Walmart</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gotopostjob" class="section-p1">
+    <div class="postjobtext">
+      <h4>Hire Talented People!</h4>
+      <p>Our platform also gives you the option to <span>Get New Employees</span></p>
+      <button id="postbutton" class="normal" onclick="postjobopen()">Post a Job</button>
+    </div>
+    <div class="popupcontainer nopopup" id="popupcontainer">
+    <div class="popup nopopup" id="popup">
+      <h1>Hire People!</h1>
+      <div class="companyname">
+        <select name="Company Name" id="post_compname" class="popupselect">
+          <option value="none">Select Company</option>
+          <option value="Google">Google</option>
+          <option value="Apple">Apple</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Microsoft">Microsoft</option>
+          <option value="Netflix">Netflix</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Spotify">Spotify</option>
+          <option value="Tesla">Tesla</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Youtube">Youtube</option>
+          <option value="Adobe">Adobe</option>
+          <option value="AWS">AWS</option>
+          <option value="Intel">Intel</option>
+          <option value="Oracle">Oracle</option>
+          <option value="Paypal">Paypal</option>
+          <option value="Walmart">Walmart</option>
+        </select>
+      </div>
+      <select name="category" id="post_type" class="popupselect">
+        <option value="none"> Full Time / Part Time</option>
+        <option value="Full Time">Full Time</option>
+        <option value="Part Time">Part Time</option>
+      </select>
+      <input type="text" placeholder="Job Name:" id="post_jobname">
+      <input type="text" placeholder="Country:" id="post_countryname">
+      <select name="type" id="post_designation" class="popupselect">
+        <option value="none">Post</option>
+        <option value="FrontEnd">FrontEnd</option>
+        <option value="BackEnd">BackEnd</option>
+        <option value="AppDev">AppDev</option>
+        <option value="UI/UX">UI/UX Designer</option>
+      </select>
+      <input type="text" placeholder="Skills Required..." id="post_skills">
+      <input type="submit" id="post_submit"  value="Upload">
+      <h3 onclick="postjobclose()">Close</h3>
+    </div>
+    </div>
+
+
+
+  </section>
+
+  <footer class="section-p1">
+    <div class="col">
+      <div><img class="colimg" src="img/logo.svg" alt=""><span class="logoname">HUNTJOBS</span></div>
+      <h4>Contact</h4>
+      <p><strong>Adress:</strong> 123 Baker Street</p>
+      <p><strong>Phone:</strong> +01 2345 6789</p>
+      <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+      <div class="follow">
+        <h4>Follow Us</h4>
+        <div class="icon">
+          <a href="https://www.facebook.com" style="text-decoration: none"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" style="text-decoration: none"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/home?lang=en" style="text-decoration: none"><i class="fab fa-twitter"></i></a>
+          <a href="https://in.pinterest.com" style="text-decoration: none"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://www.youtube.com" style="text-decoration: none"><i class="fab fa-youtube"></i></a>        
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+      <h4>Quick Link</h4>
+      <a href="#gotojobs">View Jobs</a>
+      <a href="postjob.html">Post Jobs</a>
+      <a href="#gotopartner">Our Partners</a>
+    </div>
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+        <a href="https://play.google.com/store/apps"><img src="img/play.jpg" alt="Google Store"></a><a href="https://www.apple.com/in/app-store/"><img src="img/app.jpg" alt="Apple App Store"></a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
