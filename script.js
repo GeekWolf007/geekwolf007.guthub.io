@@ -335,7 +335,7 @@ function ButtonClick_FE(){
   { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd Developer" },
   { name: "AWS", jobname: "Amazon Consultant", category: "Full Time", country: "India", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/aws.png", type: "Consulting" },
   { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , United States", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
-  { name: "BCG", jobname: "Boston Consulting Group Consultant", category: "Full Time", country: "India , United States , Japan", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/bcg.png", type: "Consulting" },
+  { name: "BCG", jobname: "Boston Consulting Group Consultant", category: "Full Time", country: "India , United States , Japan", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/BCG.png", type: "Consulting" },
   { name: "JPMorgan", jobname: "J.P.Morgan Investment Banker", category: "Full Time", country: "India , Japan", skills: "Strong Numerical and Analytical skills , Financial Reports", image: "img/companies/JPMorgan.png", type: "Finance" },
 
 ];
