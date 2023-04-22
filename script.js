@@ -94,7 +94,13 @@ const partneropenfunction = () => {
 
 
 
-
+let secret = document.getElementById("secret")
+let heart = document.getElementById("heart");
+const invisible = () => {
+  secret.classList.toggle("invisible");
+  console.log("hi");
+}
+heart.addEventListener("click", invisible);
 
 
 
@@ -328,6 +334,9 @@ function ButtonClick_FE(){
   { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/insta.png", type: "UI" },
   { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd" },
   { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd" },
+  { name: "AWS", jobname: "Amazon Consultant", category: "Full Time", country: "India", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/aws.png", type: "Consulting" },
+  { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , USA", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
+
 ];
 renderjobs(jobdata);
 
@@ -350,6 +359,7 @@ const filterHandler = (event) => {
       jobdata.name.toLowerCase().includes(searchText) ||
       jobdata.category.toLowerCase().includes(searchText) ||
       jobdata.country.toLowerCase().includes(searchText) ||
+      jobdata.type.toLowerCase().includes(searchText) ||
       (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
       jobdata.skills.toLowerCase().includes(searchText)
       );
@@ -378,6 +388,7 @@ const filterHandler2 = (event) => {
       jobdata.name.toLowerCase().includes(searchText) ||
       jobdata.category.toLowerCase().includes(searchText) ||
       jobdata.country.toLowerCase().includes(searchText) ||
+      jobdata.type.toLowerCase().includes(searchText) ||
       (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
       jobdata.skills.toLowerCase().includes(searchText)
       );
@@ -435,7 +446,5 @@ const postjobclose=()=>{
   postbutton.classList.remove("active")
   homebutton.classList.add("active")
 }
-
-
 
 

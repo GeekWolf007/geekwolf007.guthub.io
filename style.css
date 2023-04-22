@@ -966,6 +966,7 @@ footer{
   border-radius: 5px;
   
 }
+
 .love{
   display: flex;
   justify-content: center;
@@ -983,6 +984,7 @@ footer{
   animation: beat 0.5s infinite alternate;
   transform-origin: center;
   padding-bottom: 0.2%;
+  cursor: pointer;
 }
 @keyframes beat {
   0%{
@@ -993,4 +995,20 @@ footer{
   }
 }
 
-
+.secret{
+  position: absolute;
+  bottom: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.secret span{
+  padding: 1%;
+  margin-bottom: 1%;
+  background-color: #ffc000;
+  border-radius: 4px;
+  color: #000;
+}
+.invisible{
+  display: none !important;
+}
