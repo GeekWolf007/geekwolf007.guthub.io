@@ -832,7 +832,7 @@ footer{
     padding: 0.3em 1em;
   }
   .button-value:nth-child(3){
-    page-break-after: always;
+    break-after: always;
   }
 }
 @media only screen and (max-width:450px){
@@ -840,7 +840,7 @@ footer{
     padding: 10px 5px;
   }
   .button-value:nth-child(3){
-    page-break-after: always;
+    break-after: always;
   }
   #gotojobs h2{
     font-size: 34px;
