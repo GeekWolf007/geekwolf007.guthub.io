@@ -656,7 +656,6 @@ footer{
     break-after: always;
   }
   .pro-container{
-    flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
@@ -759,9 +758,6 @@ footer{
   }
 }
 @media only screen and (max-width:760px){
-  #feature{
-    flex-direction: column;
-  }
   .product-content h3{
     font-size: 1rem;
   }
