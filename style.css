@@ -17,6 +17,7 @@ padding: 40px 80px ;
 body{
   position: relative;
   top: 10vh;
+  overflow-x: hidden
 }
 
 header{
