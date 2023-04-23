@@ -18,12 +18,26 @@ function getCountryByState(statename) {
 
 let popupcontainer = document.getElementById("popupcontainer");
 let popup = document.getElementById("popup");
+let companyname_input = document.getElementById("post_compname");
+let duration_input = document.getElementById("post_type");
+let jobname_input = document.getElementById("post_jobname");
+let countryname_input = document.getElementById("post_countryname");
+let designation_input = document.getElementById("post_designation");
+let skills_input = document.getElementById("post_skills");
+let uploadbutton = document.getElementById("post_submit");
 function Clear(){
   document.getElementById('textbox').value='';
   document.getElementById('textbox2').value='';
   location.href="#"
   popupcontainer.classList.add("nopopup");
   popup.classList.add("nopopup");
+  companyname_input.value="none";
+  duration_input.value="none";
+  jobname_input.value="";
+  countryname_input.value="";
+  designation_input.value="none";
+  skills_input.value="";
+
 }
 
 
@@ -324,21 +338,22 @@ function ButtonClick_FE(){
   
   
   
-  let jobdata = [
-    { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Developer" },
+  let defaultjobdata = [
+  { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Developer" },
   { name: "Apple", jobname: "Apple Appstore App Developer", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Developer" },
   { name: "Microsoft", jobname: "Microsoft Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Developer" },
   { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Developer" },
-  { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/yt.png", type: "UI/UX" },
-  { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/insta.png", type: "UI/UX" },
+  { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/youtube.png", type: "UI/UX" },
+  { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/instagram.png", type: "UI/UX" },
   { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd Developer" },
   { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd Developer" },
   { name: "AWS", jobname: "Amazon Consultant", category: "Full Time", country: "India", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/aws.png", type: "Consulting" },
   { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , United States", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
   { name: "BCG", jobname: "Boston Consulting Group Consultant", category: "Full Time", country: "India , United States , Japan", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/bcg.png", type: "Consulting" },
-  { name: "JPMorgan", jobname: "J.P.Morgan Investment Banker", category: "Full Time", country: "India , Japan", skills: "Strong Numerical and Analytical skills , Financial Reports", image: "img/companies/JPMorgan.png", type: "Finance" },
-
+  { name: "JPMorgan", jobname: "J.P.Morgan Investment Banker", category: "Full Time", country: "India , Japan", skills: "Strong Numerical and Analytical skills , Financial Reports", image: "img/companies/jpmorgan.png", type: "Finance" },
 ];
+let formjobdata = JSON.parse(localStorage.getItem("jobDataArray")) || [];
+let jobdata = [...defaultjobdata , ...formjobdata]
 renderjobs(jobdata);
 
 
@@ -448,4 +463,33 @@ const postjobclose=()=>{
   homebutton.classList.add("active")
 }
 
+//----------------------------------------------------------------------
 
+
+//-----------------get job data from form---------------------------------
+
+
+const getdatafromform=()=>{
+  let companyname = companyname_input.value;
+  let lowercase_compname = companyname.toLowerCase();
+  let duration = duration_input.value
+  let jobname = jobname_input.value
+  let countryname = countryname_input.value;
+  let designation = designation_input.value;
+  let skills = skills_input.value;
+
+  console.log(companyname,duration ,jobname,countryname ,designation,skills);
+  let addeddata=
+  {name: companyname, jobname: jobname, category: duration,country: countryname, skills: skills,image:`img/companies/${lowercase_compname}.png` , type: designation};
+  console.log(addeddata);
+  // Retrieve the existing array of job data from local storage, or create a new one if it doesn't exist
+  let jobDataArray = JSON.parse(localStorage.getItem("jobDataArray")) || [];
+
+  // Add the new job data object to the array
+  jobDataArray.push(addeddata);
+  console.log(jobDataArray);
+  localStorage.setItem("jobDataArray", JSON.stringify(jobDataArray));
+  window.location.reload();
+}
+
+uploadbutton.addEventListener("click" , getdatafromform);
