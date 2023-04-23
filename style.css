@@ -984,7 +984,7 @@ footer{
   align-items: center;
   background-color: #041e42;
   height: 5vh;
-  width: 100vw;
+  width: 100%;
   color: white;
   position: relative;
   bottom: 0;
