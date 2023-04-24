@@ -339,14 +339,14 @@ function ButtonClick_FE(){
   
   
   let defaultjobdata = [
-  { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Software Developer" },
-  { name: "Apple", jobname: "Apple Appstore App Developer", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Software Developer" },
-  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Software Developer" },
-  { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Software Developer" },
+  { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Software Developer " },
+  { name: "Apple", jobname: "Apple Appstore App Developer ", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Software Developer " },
+  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer ", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Software Developer " },
+  { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Software Developer " },
   { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/youtube.png", type: "UI/UX" },
   { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/instagram.png", type: "UI/UX" },
-  { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd Software Developer" },
-  { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd Software Developer" },
+  { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd Software Developer " },
+  { name: "Spotify", jobname: "Spotify Backend Web Developer", category: "Full Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/spotify.png", type: "BackEnd Software Developer " },
   { name: "AWS", jobname: "Amazon Consultant", category: "Full Time", country: "India", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/aws.png", type: "Consulting" },
   { name: "PayPal", jobname: "PayPal Accountant", category: "Full Time", country: "India , United States", skills: "Data interpretation , Financial Reports", image: "img/companies/paypal.png", type: "Finance" },
   { name: "BCG", jobname: "Boston Consulting Group Consultant", category: "Full Time", country: "India , United States , Japan", skills: "Consultancy , Creative , Problem Solver", image: "img/companies/bcg.png", type: "Consulting" },
