@@ -339,10 +339,10 @@ function ButtonClick_FE(){
   
   
   let defaultjobdata = [
-  { name: "Google", jobname: "Google Frontend Web Developer", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Software Developer " },
-  { name: "Apple", jobname: "Apple Appstore App Developer ", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Software Developer " },
-  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer ", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Software Developer " },
-  { name: "Samsung", jobname: "Samsung Backend Web Developer", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Software Developer " },
+  { name: "Google", jobname: "Google Frontend Web Software Developer ", category: "Full Time", country: "United States", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/google.png", type: "FrontEnd Software Developer " },
+  { name: "Apple", jobname: "Apple Appstore App Software Developer ", category: "Full Time", country: "Silicon Valley", skills: "JAVA , KOTLIN , PYTHON , DJANGO", image: "img/companies/apple.png", type: "App Software Developer " },
+  { name: "Microsoft", jobname: "Microsoft Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/microsoft.png", type: "FrontEnd Developer" },
+  { name: "Samsung", jobname: "Samsung Backend Web Software Developer ", category: "Part Time", country: "India", skills: "JAVA , PHP , SQL", image: "img/companies/samsung.png", type: "BackEnd Developer" },
   { name: "Youtube", jobname: "Youtube UI/UX Designer", category: "Part Time", country: "India ,United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/youtube.png", type: "UI/UX" },
   { name: "Instagram", jobname: "Instagram UI/UX Designer", category: "Part Time", country: "India , United States , JAPAN", skills: "FIGMA , PHOTOSHOP , ILLUSTRATOR", image: "img/companies/instagram.png", type: "UI/UX" },
   { name: "Tesla", jobname: "Tesla Frontend Web Developer", category: "Full Time", country: "India", skills: "HTML , CSS , JAVASCRIPT", image: "img/companies/tesla.png", type: "FrontEnd Software Developer " },
@@ -493,3 +493,29 @@ const getdatafromform=()=>{
 }
 
 uploadbutton.addEventListener("click" , getdatafromform);
+
+
+const microsoftopen=()=>{
+  location.href="https://www.microsoft.com/en-in"
+}
+const chromeopen=()=>{
+  location.href="https://www.google.com/intl/en_in/chrome/"
+}
+const intelopen=()=>{
+  location.href="https://www.intel.in/content/www/in/en/homepage.html"
+}
+const paypalopen=()=>{
+  location.href="https://www.paypal.com/in/home"
+}
+const adobeopen=()=>{
+  location.href="https://www.adobe.com/in/"
+}
+const awsopen=()=>{
+  location.href="https://aws.amazon.com/"
+}
+const oracleopen=()=>{
+  location.href="https://www.oracle.com/in/"
+}
+const walmartopen=()=>{
+  location.href="https://www.walmart.com/"
+}
