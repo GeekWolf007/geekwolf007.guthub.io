@@ -134,49 +134,49 @@
   <section id="gotopartner" class="section-p1">
     <h2>Our Partners</h2>
     <div class="pro-container">
-      <div class="pro">
+      <div class="pro" onclick="microsoftopen()">
         <img src="img/partners/microsoft.png" alt="">
         <div class="des">
           <span>Microsoft</span> 
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="chromeopen()">
         <img src="img/partners/chrome.png" alt="">
         <div class="des">
           <span>Google Chrome</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="intelopen()">
         <img src="img/partners/intel.png" alt="">
         <div class="des">
           <span>Intel Inc.</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="paypalopen()">
         <img src="img/partners/paypal.png" alt="">
         <div class="des">
           <span>PayPal</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="adobeopen()">
         <img src="img/partners/adobe.png" alt="">
         <div class="des">
           <span>Adobe</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="awsopen()">
         <img src="img/partners/aws.png" alt="">
         <div class="des">
           <span>Amazon Web Services</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="oracleopen()">
         <img src="img/partners/oracle.png" alt="">
         <div class="des">
           <span>Oracle</span>
         </div>
       </div>
-      <div class="pro">
+      <div class="pro" onclick="walmartopen()">
         <img src="img/partners/walmart.png" alt="">
         <div class="des">
           <span>Walmart</span>
@@ -192,10 +192,26 @@
       <button id="postbutton" class="normal" onclick="postjobopen()">Post a Job</button>
     </div>
     <div class="popupcontainer nopopup" id="popupcontainer">
-    <div class="popup nopopup" id="popup">
-      <h1>Hire People!</h1>
+      <div class="popup nopopup" id="popup">
+        <h1>Hire People!</h1>
+     <div class="flexing">   
+        <div class="texting"> 
+         <div class="jobname">
+           <p class="posting">Job Name:</p>
+         <input type="text"  id="post_jobname" required="required">
+         </div>
+         <div class="countryname">
+           <p class="posting">Country Name:</p>
+           <input type="text"  id="post_countryname" required="required">
+         </div>
+         <div class="skills">
+           <p class="posting">Skills Required:</p>
+           <input type="text"  id="post_skills" required="required">
+         </div>
+        </div> 
+    <div class="selecting">    
       <div class="companyname">
-        <select name="Company Name" id="post_compname" class="popupselect">
+        <select name="Company Name" id="post_compname" class="popupselect" required="required">
           <option value="none">Select Company</option>
           <option value="Google">Google</option>
           <option value="Apple">Apple</option>
@@ -215,23 +231,24 @@
           <option value="Walmart">Walmart</option>
         </select>
       </div>
-      <select name="category" id="post_type" class="popupselect">
+      <select name="category" id="post_type" class="popupselect" required="required">
         <option value="none"> Full Time / Part Time</option>
         <option value="Full Time">Full Time</option>
         <option value="Part Time">Part Time</option>
       </select>
-      <input type="text" placeholder="Job Name:" id="post_jobname">
-      <input type="text" placeholder="Country:" id="post_countryname">
-      <select name="type" id="post_designation" class="popupselect">
+      <select name="type" id="post_designation" class="popupselect" required="required">
         <option value="none">Field:</option>
         <option value="Consulting">Consulting</option>
         <option value="Finance">Finance</option>
         <option value="Development">Development</option>
         <option value="Designer">Design</option>
       </select>
-      <input type="text" placeholder="Skills Required..." id="post_skills">
+
+    </div>
+    </div>
       <input type="submit" id="post_submit"  value="Upload">
-      <h3 onclick="postjobclose()">Close</h3>
+      <h3 onclick="postjobclose()"><i class="fa fa-times-circle" aria-hidden="true"></i>
+      </h3>
     </div>
     </div>
 
@@ -274,7 +291,7 @@
       <h4>Install App</h4>
       <p>From App Store or Google Play</p>
       <div class="row">
-        <a href="https://play.google.com/store/apps"><img src="img/play.jpg" alt="Google Store"></a><a href="https://www.apple.com/in/app-store/"><img src="img/app.jpg" alt="Apple App Store"></a>
+        <a href="https://www.apple.com/in/app-store/"><img src="img/app.jpg" alt="Apple App Store"></a><a href="https://play.google.com/store/apps"><img src="img/play.jpg" alt="Google Store"></a>
       </div>
     </div>
   </footer>
