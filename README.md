@@ -6,7 +6,7 @@
 Users have the option to search jobs via: *[Job Title] *[Job Location] *[Job Company] *[Job Requirements] and much more....
 
 ### View Website 
-No need to install anything just click here to go to the website
+No need to install anything just [click here](https://huntjobs.vercel.app/#) to go to the website
 
 ### Technologies Used 
 The project is created solely via: 
