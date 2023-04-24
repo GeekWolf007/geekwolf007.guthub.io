@@ -89,7 +89,7 @@ header{
 }
 #navbar li a{
   color: #313131;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 0 10px;
   padding: 4px 5px;
@@ -98,8 +98,8 @@ header{
 }
 #navbar li a.active,
 #navbar li a:hover{
-  color: #088178;
-  border-bottom: 2px solid #088178;
+  color: #FFC000;
+  /* border-bottom: 2px solid #088178; */
 }
 .headingmain{
   display: flex;
@@ -166,6 +166,7 @@ header{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   font-size:1rem;
+  padding: 0rem 1rem;
 }
 .searchbox button{
   width: 30%;
@@ -196,6 +197,7 @@ header{
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   font-size:1rem;
+  padding: 0 1rem;
 }
 .searchbox2 button{
   border: 2px solid #ffc000;
@@ -232,6 +234,10 @@ header{
   border: 1px solid #cce7d0;
   border-radius: 4px;
   margin: 15px 0;
+  height: 190px;
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 #feature .fe-box:hover{
   box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
@@ -332,9 +338,9 @@ header{
   right: 10px;
 }
 #gotojobs .para{
-  font-size: 16px;
+  font-size: 14px;
   color: #465b52;
-  margin: 15px 0 20px 0;
+  margin: 5px 0 20px 0;
 }
 #gotojobs h2{
   font-size: 46px;
@@ -407,10 +413,10 @@ header{
   font-family: 'Spartan' , sans-serif;
 }
 #banner h2 span{
-  color: #088178;
+  color: #FFC000;
 }
 #banner button:hover{
-  background: #088178;
+  background: #ffc000;
   color: #fff;
 }
 button.normal{
@@ -485,7 +491,7 @@ button.normal{
   padding-left: 10px;
 }
 .product-content h3{
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-top: 2%;
   text-align: left;
 }
@@ -545,7 +551,7 @@ button.normal{
 #newsletter button{
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: #088178;
+  background-color: #ffc000;
   color: #fff;
   font-family: 'Spartan' , sans-serif;
   white-space: nowrap;
@@ -611,7 +617,7 @@ footer{
 .install{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .install a img{
   height: 50px;
@@ -624,7 +630,14 @@ footer{
 .hamburger{
   display:none ;
 }
-
+.row{
+  display: flex;
+  /* flex-direction: column; */
+}
+.row a{
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 
 @media only screen and (max-width:1350px){
@@ -764,6 +777,12 @@ footer{
   }
   .jobdes{
     font-size: 12px;
+  }
+  .flexing{
+    flex-direction: column;
+  }
+  .popup input{
+    margin: 0 !important;
   }
 }
 @media only screen and (max-width:580px){
@@ -905,7 +924,7 @@ footer{
 }
 #postbutton:hover{
   color: #fff;
-  background-color: #088178;
+  background-color: #FFC000;
 }
 .popupcontainer{
   position: fixed;
@@ -937,8 +956,8 @@ footer{
   display: none;
 }
 .popup h1{
-  color: #313131;
-  font-size: 30px;
+  color: #170A1C;
+  font-size: 40px;
   padding: 10px 0;
   font-family: 'Spartan' , sans-serif;
   margin: 5vh 0;
@@ -949,31 +968,41 @@ footer{
   width: 15vw;
   height: 5vh;
   border-radius: 20px;
-  background-color: #000;
+  background-color: #170A1C;
   color: #fff;
   cursor: pointer;
 }
 #post_submit:hover{
-  background-color: #088178;
+  background-color: #ffc000;
   color: #fff;
 }
 .popup h3{
   margin: 10vh 0;
   cursor: pointer;
+  color: #000;
+  position: absolute;
+  top: -8%;
+  left: 3%;
+}
+.popup h3 i{
+  font-size: 3rem;
+}
+.popup h3 i:hover{
   color: red;
-  border-bottom: 2px solid red;
 }
 .popupselect{
-  width: 60vw;
-  height: 8vh;
-  padding: 10px 0;
+  width: 30vw;
+  height: 4vh;
+  padding: 4px 0;
   text-align: center;
   border-radius: 5px;
+  /* background-color: rgba(255, 192, 0, 0.7); */
 }
 .popup input{
-  width: 60vw;
-  height: 8vh;
+  width: 30vw;
+  height: 4vh;
   padding: 10px 0;
+  margin: 0 10px 0 0;
   text-align: center;
   border-radius: 5px;
   
@@ -1023,4 +1052,25 @@ footer{
 }
 .invisible{
   display: none !important;
+}
+
+.posting{
+  margin: 0 !important;
+  color: #ffc000 !important;
+}
+.texting{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.flexing{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selecting{
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-evenly;
 }
