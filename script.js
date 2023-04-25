@@ -478,7 +478,10 @@ const getdatafromform=()=>{
   let designation = designation_input.value;
   let skills = skills_input.value;
 
-  console.log(companyname,duration ,jobname,countryname ,designation,skills);
+  if(companyname.length == 0 || duration == "none" || jobname.length == 0 || countryname == "none" || designation == "none" || skills.length == 0){
+    alert("All Fields are Required")
+  }else{
+  // console.log(companyname,duration ,jobname,countryname ,designation,skills);
   let addeddata=
   {name: companyname, jobname: jobname, category: duration,country: countryname, skills: skills,image:`img/companies/${lowercase_compname}.png` , type: designation};
   console.log(addeddata);
@@ -490,7 +493,9 @@ const getdatafromform=()=>{
   console.log(jobDataArray);
   localStorage.setItem("jobDataArray", JSON.stringify(jobDataArray));
   window.location.reload();
+ }
 }
+
 
 uploadbutton.addEventListener("click" , getdatafromform);
 
