@@ -156,6 +156,8 @@ function sync(){
 
 
 function ButtonClick_All(){
+  let oops = document.getElementById('oops');
+    oops.classList.add('none');
   alljobbutton.classList.add("activatedbutton");
   fejobbutton.classList.remove("activatedbutton");
   bejobbutton.classList.remove("activatedbutton");
@@ -168,6 +170,8 @@ function ButtonClick_All(){
   renderjobs(alljobs);
 }
 function ButtonClick_FE(){
+  let oops = document.getElementById('oops');
+    oops.classList.add('none');
   alljobbutton.classList.remove("activatedbutton");
   fejobbutton.classList.add("activatedbutton");
   bejobbutton.classList.remove("activatedbutton");
@@ -181,6 +185,8 @@ function ButtonClick_FE(){
     renderjobs(fejobs);
   }
   function ButtonClick_BE(){
+    let oops = document.getElementById('oops');
+    oops.classList.add('none');
     alljobbutton.classList.remove("activatedbutton");
     fejobbutton.classList.remove("activatedbutton");
     bejobbutton.classList.add("activatedbutton");
@@ -194,6 +200,8 @@ function ButtonClick_FE(){
     renderjobs(bejobs);
   }
   function ButtonClick_App(){
+    let oops = document.getElementById('oops');
+    oops.classList.add('none');
     alljobbutton.classList.remove("activatedbutton");
     fejobbutton.classList.remove("activatedbutton");
     bejobbutton.classList.remove("activatedbutton");
@@ -207,6 +215,8 @@ function ButtonClick_FE(){
     renderjobs(appjobs);
   }
   function ButtonClick_UI(){
+    let oops = document.getElementById('oops');
+    oops.classList.add('none');
     alljobbutton.classList.remove("activatedbutton");
     fejobbutton.classList.remove("activatedbutton");
     bejobbutton.classList.remove("activatedbutton");
@@ -415,30 +425,44 @@ searchInputEl.addEventListener('keyup', filterHandler);
 const searchInputEl2 = document.getElementById("textbox2");
 const filterHandler2 = (event) => {
   const searchText = event.target.value.toLowerCase();
-  
+
+  let selectedCategory = '';
+  if (alljobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = '';
+  } else if (fejobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Consulting';
+  } else if (bejobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Finance';
+  } else if (appjobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Developer';
+  } else if (uijobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'UI';
+  }
+
   const filteredJobs = jobdata.filter((jobdata) => {
     const countryName = getCountryByState(searchText);
     return (
-      jobdata.jobname.toLowerCase().includes(searchText) ||
-      jobdata.name.toLowerCase().includes(searchText) ||
-      jobdata.category.toLowerCase().includes(searchText) ||
-      jobdata.country.toLowerCase().includes(searchText) ||
-      jobdata.type.toLowerCase().includes(searchText) ||
-      (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
-      jobdata.skills.toLowerCase().includes(searchText)
-      );
-    });
-    
-    renderjobs(filteredJobs);
-    
-    if (filteredJobs.length === 0) {
-      let oops = document.getElementById("oops");
-      oops.classList.remove("none");
-    } else {
-      let oops = document.getElementById("oops");
-      oops.classList.add("none");
-    }
-  };
+      (selectedCategory === '' || jobdata.type === selectedCategory) && 
+      (jobdata.jobname.toLowerCase().includes(searchText) ||
+        jobdata.name.toLowerCase().includes(searchText) ||
+        jobdata.category.toLowerCase().includes(searchText) ||
+        jobdata.country.toLowerCase().includes(searchText) ||
+        jobdata.type.toLowerCase().includes(searchText) ||
+        (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
+        jobdata.skills.toLowerCase().includes(searchText))
+    );
+  });
+
+  renderjobs(filteredJobs);
+  if (filteredJobs.length === 0) {
+    let oops = document.getElementById('oops');
+    oops.classList.remove('none');
+  } else {
+    let oops = document.getElementById('oops');
+    oops.classList.add('none');
+  }
+};
+
   searchInputEl2.addEventListener('keyup', filterHandler2);
   
 renderjobs(jobdata);
