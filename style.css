@@ -638,6 +638,9 @@ footer{
   margin: 0 !important;
   padding: 0 !important;
 }
+#buttons{
+margin-bottom: 2rem;
+}
 
 
 @media only screen and (max-width:1350px){
