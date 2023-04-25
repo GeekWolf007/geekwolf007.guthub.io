@@ -855,6 +855,12 @@ margin-bottom: 2rem;
   .button-value:nth-child(3){
     break-after: always;
   }
+  .popup input{
+  width: 50vw !important;
+  }
+  .popupselect{
+  width: 50vw !important;
+  }
 }
 @media only screen and (max-width:450px){
   .section-p1{
