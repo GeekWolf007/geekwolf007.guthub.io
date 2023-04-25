@@ -1064,6 +1064,7 @@ margin-bottom: 2rem;
 .posting{
   margin: 0 !important;
   color: #ffc000 !important;
+  text-align:left;
 }
 .texting{
   display: flex;
