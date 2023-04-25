@@ -79,7 +79,7 @@ const jobopenfunction = () => {
   popupcontainer.classList.add("nopopup");
   popup.classList.add("nopopup");
   
-  // Scroll to the desired section using JavaScript
+  
   setTimeout(() => {
     const section = document.getElementById('gotojobs');
     window.scrollTo({
@@ -95,7 +95,7 @@ const partneropenfunction = () => {
   popupcontainer.classList.add("nopopup");
   popup.classList.add("nopopup");
 
-  // Scroll to the desired section using JavaScript
+  
   setTimeout(() => {
     const section = document.getElementById('gotopartner');
     window.scrollTo({
@@ -173,7 +173,8 @@ function ButtonClick_FE(){
   bejobbutton.classList.remove("activatedbutton");
   appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'Consulting';
+    // document.getElementById("textbox2").value= 'Consulting';
+    document.getElementById("textbox2").value= '';
     const fejobs = jobdata.filter((jobdata)=>{
       return jobdata.type.includes("Consulting");
     });
@@ -185,7 +186,8 @@ function ButtonClick_FE(){
     bejobbutton.classList.add("activatedbutton");
     appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'Finance';
+    // document.getElementById("textbox2").value= 'Finance';
+    document.getElementById("textbox2").value= '';
     const bejobs = jobdata.filter((jobdata)=>{
       return jobdata.type.includes("Finance");
     });
@@ -197,7 +199,8 @@ function ButtonClick_FE(){
     bejobbutton.classList.remove("activatedbutton");
     appjobbutton.classList.add("activatedbutton");
     uijobbutton.classList.remove("activatedbutton");
-    document.getElementById("textbox2").value= 'Development';
+    // document.getElementById("textbox2").value= 'Development';
+    document.getElementById("textbox2").value= '';
     const appjobs = jobdata.filter((jobdata)=>{
       return jobdata.type.includes("Developer");
     });
@@ -209,7 +212,8 @@ function ButtonClick_FE(){
     bejobbutton.classList.remove("activatedbutton");
     appjobbutton.classList.remove("activatedbutton");
     uijobbutton.classList.add("activatedbutton");
-    document.getElementById("textbox2").value= 'Design';
+    // document.getElementById("textbox2").value= 'Design';
+    document.getElementById("textbox2").value= '';
     const uijobs = jobdata.filter((jobdata)=>{
       return jobdata.type.includes("UI");
     });
@@ -367,30 +371,45 @@ renderjobs(jobdata);
 const searchInputEl = document.getElementById("textbox");
 const filterHandler = (event) => {
   const searchText = event.target.value.toLowerCase();
-  
+
+  let selectedCategory = '';
+  if (alljobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = '';
+  } else if (fejobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Consulting';
+  } else if (bejobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Finance';
+  } else if (appjobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'Developer';
+  } else if (uijobbutton.classList.contains('activatedbutton')) {
+    selectedCategory = 'UI';
+  }
+
   const filteredJobs = jobdata.filter((jobdata) => {
     const countryName = getCountryByState(searchText);
     return (
-      jobdata.jobname.toLowerCase().includes(searchText) ||
-      jobdata.name.toLowerCase().includes(searchText) ||
-      jobdata.category.toLowerCase().includes(searchText) ||
-      jobdata.country.toLowerCase().includes(searchText) ||
-      jobdata.type.toLowerCase().includes(searchText) ||
-      (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
-      jobdata.skills.toLowerCase().includes(searchText)
-      );
-    });
-    
-    renderjobs(filteredJobs);
-    
-    if (filteredJobs.length === 0) {
-      let oops = document.getElementById("oops");
-    oops.classList.remove("none");
+      (selectedCategory === '' || jobdata.type === selectedCategory) && 
+      (jobdata.jobname.toLowerCase().includes(searchText) ||
+        jobdata.name.toLowerCase().includes(searchText) ||
+        jobdata.category.toLowerCase().includes(searchText) ||
+        jobdata.country.toLowerCase().includes(searchText) ||
+        jobdata.type.toLowerCase().includes(searchText) ||
+        (countryName && jobdata.country.toLowerCase().includes(countryName.toLowerCase())) ||
+        jobdata.skills.toLowerCase().includes(searchText))
+    );
+  });
+
+  renderjobs(filteredJobs);
+
+  if (filteredJobs.length === 0) {
+    let oops = document.getElementById('oops');
+    oops.classList.remove('none');
   } else {
-    let oops = document.getElementById("oops");
-    oops.classList.add("none");
+    let oops = document.getElementById('oops');
+    oops.classList.add('none');
   }
 };
+
 searchInputEl.addEventListener('keyup', filterHandler);
 
 const searchInputEl2 = document.getElementById("textbox2");
@@ -485,17 +504,14 @@ const getdatafromform=()=>{
   let addeddata=
   {name: companyname, jobname: jobname, category: duration,country: countryname, skills: skills,image:`img/companies/${lowercase_compname}.png` , type: designation};
   console.log(addeddata);
-  // Retrieve the existing array of job data from local storage, or create a new one if it doesn't exist
   let jobDataArray = JSON.parse(localStorage.getItem("jobDataArray")) || [];
 
-  // Add the new job data object to the array
   jobDataArray.push(addeddata);
   console.log(jobDataArray);
   localStorage.setItem("jobDataArray", JSON.stringify(jobDataArray));
   window.location.reload();
  }
 }
-
 
 uploadbutton.addEventListener("click" , getdatafromform);
 
