@@ -858,7 +858,7 @@ margin-bottom: 2rem;
 }
 @media only screen and (max-width:450px){
   .section-p1{
-    padding: 10px 5px;
+    padding: 35px 5px;
   }
   .button-value:nth-child(3){
     break-after: always;
