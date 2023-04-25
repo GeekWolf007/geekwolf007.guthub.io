@@ -760,7 +760,7 @@ footer{
     width: 80% !important;
   }
   .section-p1{
-    padding: 30px 30px;
+    padding: 60px 30px;
   }
   .logoimg{
     height: 40px;
@@ -838,7 +838,7 @@ footer{
 }
 @media only screen and (max-width:480px){
   .section-p1{
-    padding: 10px 5px;
+    padding: 35px 5px;
   }
   #buttons{
     padding-top: 1em;
