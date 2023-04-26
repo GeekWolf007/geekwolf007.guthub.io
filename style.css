@@ -524,6 +524,7 @@ button.normal{
   font-weight: 700;
   color: #fff;
   font-family: 'Spartan' , sans-serif;
+  padding: 0 1rem;
 }
 #newsletter p{
   font-size: 14px;
