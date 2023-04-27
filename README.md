@@ -2,7 +2,7 @@
  This is a job listings website where users can view all the job listings and have the additional options to search and even post jobs.
 
 
-### Search Functionality 
+## Search Functionality 
 Users have the option to search jobs via: 
 * Job Title
 * Job Location
@@ -10,10 +10,10 @@ Users have the option to search jobs via:
 * Job Requirements
 and much more....
 
-### View Website 
+## View Website 
 No need to install anything just [click here](https://huntjobs.vercel.app/#) to go to the website
 
-### Technologies Used 
+## Technologies Used 
 The project is created solely via: 
 * HTML 
 * CSS 
