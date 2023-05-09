@@ -52,6 +52,9 @@ const openfunction =()=>{
   navbar[0].classList.toggle('open');
   popupcontainer.classList.add("nopopup");
   popup.classList.add("nopopup");
+  document.getElementsByClassName("line")[2].classList.toggle("rotate2");
+  document.getElementsByClassName("line")[1].classList.toggle("invisible");
+  document.getElementsByClassName("line")[0].classList.toggle("rotate1");
 }
 const postjobopenfunction =()=>{
   setTimeout(() => {
