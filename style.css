@@ -17,11 +17,11 @@ padding: 40px 80px ;
   visibility: hidden;
 }
 .rotate1{
-  transform: rotate(-45deg) translate(-5px);
+  transform: rotate(-45deg) translate(-9px);
 
 }
 .rotate2{
-  transform: rotate(45deg) translate(-6px);
+  transform: rotate(45deg) translate(-7px);
 }
 
 body{
